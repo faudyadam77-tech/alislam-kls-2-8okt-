@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kisah Nabi Lut A.S. - Al-Islam Kelas 2 SD</title>
+    <!-- Menambahkan font ceria untuk anak-anak -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* Menggunakan font Nunito yang bulat dan ramah anak */
+            font-family: 'Nunito', 'Comic Sans MS', sans-serif;
+            /* Background biru langit muda ceria */
+            background-color: #E0F7FA;
+            background-image: radial-gradient(#B2EBF2 20%, transparent 20%), radial-gradient(#B2EBF2 20%, transparent 20%);
+            background-size: 40px 40px;
+            background-position: 0 0, 20px 20px;
+            color: #334155;
+            line-height: 1.8;
+            padding: 30px 16px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            /* Sudut yang sangat membulat dan border tebal layaknya buku cerita */
+            border-radius: 32px;
+            border: 8px solid #ffffff;
+            box-shadow: 0 12px 30px rgba(0, 150, 136, 0.2);
+            overflow: hidden;
+        }
+
+        .header {
+            /* Warna gradient pelangi biru ke ungu ceria */
+            background: linear-gradient(135deg, #38BDF8 0%, #818CF8 100%);
+            color: #ffffff;
+            padding: 45px 30px;
+            text-align: center;
+            border-bottom: 6px dashed rgba(255, 255, 255, 0.4);
+        }
+
+        .header h1 {
+            font-size: 36px;
+            font-weight: 900;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+            text-shadow: 3px 3px 0px #2563EB, 5px 5px 0px rgba(0,0,0,0.1);
+        }
+
+        .header p {
+            font-size: 18px;
+            font-weight: 800;
+            background: #FCD34D;
+            color: #B45309;
+            display: inline-block;
+            padding: 8px 24px;
+            border-radius: 30px;
+            box-shadow: 2px 4px 0px #D97706;
+            margin-top: 5px;
+        }
+
+        .content {
+            padding: 40px 30px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 900;
+            color: #ffffff;
+            background: #FB7185;
+            display: inline-block;
+            padding: 8px 24px;
+            border-radius: 20px;
+            box-shadow: 3px 4px 0px #E11D48;
+            margin-bottom: 24px;
+            margin-top: 36px;
+            transform: rotate(-2deg);
+        }
+
+        .section-title:first-child {
+            margin-top: 0;
+        }
+
+        .story-block {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 24px;
+            margin-bottom: 20px;
+            border: 4px solid;
+            transition: transform 0.2s;
+        }
+
+        .story-block:hover {
+            transform: scale(1.02);
+        }
+
+        /* Memberikan warna berbeda pada setiap blok cerita agar tidak bosan */
+        .story-block:nth-of-type(1) { border-color: #38BDF8; box-shadow: 0 6px 0 #38BDF8; }
+        .story-block:nth-of-type(2) { border-color: #F472B6; box-shadow: 0 6px 0 #F472B6; }
+        .story-block:nth-of-type(3) { border-color: #34D399; box-shadow: 0 6px 0 #34D399; }
+        .story-block:nth-of-type(4) { border-color: #FBBF24; box-shadow: 0 6px 0 #FBBF24; }
+        .story-block:nth-of-type(5) { border-color: #A78BFA; box-shadow: 0 6px 0 #A78BFA; }
+
+        .story-block:nth-of-type(1) h3 { color: #0284C7; }
+        .story-block:nth-of-type(2) h3 { color: #BE185D; }
+        .story-block:nth-of-type(3) h3 { color: #047857; }
+        .story-block:nth-of-type(4) h3 { color: #B45309; }
+        .story-block:nth-of-type(5) h3 { color: #6D28D9; }
+
+        .story-block h3 {
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .story-block p {
+            font-size: 18px;
+            color: #475569;
+            font-weight: 700;
+        }
+
+        .tokoh-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .tokoh-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+            border: 4px solid;
+            transition: transform 0.2s;
+        }
+
+        .tokoh-card:hover {
+            transform: translateY(-4px);
+        }
+
+        /* Warna warni untuk kartu tokoh */
+        .tokoh-card:nth-child(1) { border-color: #34D399; box-shadow: 0 6px 0 #34D399; }
+        .tokoh-card:nth-child(2) { border-color: #F87171; box-shadow: 0 6px 0 #F87171; }
+        .tokoh-card:nth-child(3) { border-color: #FBBF24; box-shadow: 0 6px 0 #FBBF24; }
+        .tokoh-card:nth-child(4) { border-color: #60A5FA; box-shadow: 0 6px 0 #60A5FA; }
+
+        .tokoh-card strong {
+            display: block;
+            font-size: 20px;
+            font-weight: 900;
+            margin-bottom: 6px;
+            color: #1E293B;
+        }
+
+        .tokoh-card span {
+            font-size: 15px;
+            font-weight: 700;
+            color: #64748B;
+        }
+
+        .pesan-box {
+            background: #FEF3C7;
+            padding: 28px;
+            border-radius: 24px;
+            margin-top: 36px;
+            border: 4px dashed #F59E0B;
+            box-shadow: 0 6px 0 #F59E0B;
+        }
+
+        .pesan-box h3 {
+            color: #B45309;
+            font-size: 22px;
+            font-weight: 900;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+        }
+
+        .pesan-box ul {
+            list-style: none; /* Menghilangkan bullet standar */
+        }
+
+        .pesan-box li {
+            margin-bottom: 12px;
+            font-size: 18px;
+            font-weight: 700;
+            color: #78350F;
+            position: relative;
+            padding-left: 32px;
+        }
+
+        /* Menambahkan icon bintang untuk pesan moral */
+        .pesan-box li::before {
+            content: "⭐";
+            position: absolute;
+            left: 0;
+            top: -2px;
+            font-size: 20px;
+        }
+
+        .soal-intro {
+            font-size: 18px;
+            font-weight: 700;
+            color: #64748B;
+            margin-bottom: 24px;
+            margin-top: -10px;
+            background: #F1F5F9;
+            padding: 16px;
+            border-radius: 16px;
+            border-left: 6px solid #94A3B8;
+        }
+
+        .soal-card {
+            background: #ffffff;
+            border: 4px solid #818CF8;
+            border-radius: 24px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 6px 0 #818CF8;
+            transition: transform 0.2s;
+        }
+
+        .soal-card:hover {
+            transform: translateY(-2px);
+            border-color: #6366F1;
+            box-shadow: 0 8px 0 #6366F1;
+        }
+
+        .soal-card h4 {
+            font-size: 18px;
+            font-weight: 800;
+            color: #1E293B;
+            margin-bottom: 18px;
+            line-height: 1.6;
+        }
+
+        .soal-card h4 .nomor {
+            display: inline-block;
+            background: #FB7185;
+            color: #ffffff;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 36px;
+            font-size: 18px;
+            font-weight: 900;
+            margin-right: 12px;
+            vertical-align: middle;
+            box-shadow: 0 3px 0 #E11D48;
+        }
+
+        .pilihan {
+            list-style: none;
+            padding: 0;
+        }
+
+        .pilihan li {
+            margin-bottom: 12px;
+        }
+
+        .pilihan label {
+            display: flex;
+            align-items: center;
+            padding: 14px 18px;
+            background: #F8FAFC;
+            border: 3px solid #E2E8F0;
+            border-radius: 16px;
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 16px;
+            font-weight: 700;
+            color: #475569;
+        }
+
+        .pilihan label:hover {
+            background: #EFF6FF;
+            border-color: #93C5FD;
+            transform: translateX(6px);
+        }
+
+        .pilihan input[type="radio"] {
+            margin-right: 14px;
+            accent-color: #3B82F6;
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+            cursor: pointer;
+        }
+
+        /* Gaya ketika pilihan diklik */
+        .pilihan input[type="radio"]:checked + span {
+            font-weight: 900;
+            color: #2563EB;
+        }
+
+        .pilihan input[type="radio"]:checked ~ label {
+            background: #DBEAFE;
+            border-color: #3B82F6;
+        }
+
+        .feedback {
+            margin-top: 16px;
+            padding: 16px 20px;
+            border-radius: 16px;
+            font-size: 16px;
+            font-weight: 800;
+            display: none;
+            line-height: 1.5;
+            animation: popIn 0.3s ease-out;
+        }
+
+        @keyframes popIn {
+            0% { transform: scale(0.9); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .feedback.benar {
+            display: block;
+            background: #DCFCE7;
+            color: #166534;
+            border: 3px dashed #22C55E;
+        }
+
+        .feedback.salah {
+            display: block;
+            background: #FEE2E2;
+            color: #991B1B;
+            border: 3px dashed #EF4444;
+        }
+
+        .btn-cek {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            background: #34D399;
+            color: #ffffff;
+            border: none;
+            border-radius: 24px;
+            font-size: 24px;
+            font-weight: 900;
+            cursor: pointer;
+            margin-top: 36px;
+            transition: all 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 8px 0 #059669;
+            font-family: inherit;
+        }
+
+        .btn-cek:hover {
+            transform: translateY(2px);
+            box-shadow: 0 6px 0 #059669;
+            background: #10B981;
+        }
+
+        .btn-cek:active {
+            transform: translateY(8px);
+            box-shadow: 0 0 0 #059669;
+        }
+
+        .hasil {
+            display: none;
+            margin-top: 36px;
+            padding: 36px 24px;
+            border-radius: 24px;
+            text-align: center;
+            animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .hasil.tampil {
+            display: block;
+        }
+
+        .hasil.bagus {
+            background: #ECFDF5;
+            border: 6px dashed #34D399;
+            box-shadow: 0 8px 0 #34D399;
+        }
+
+        .hasil.cukup {
+            background: #FFFBEB;
+            border: 6px dashed #FBBF24;
+            box-shadow: 0 8px 0 #FBBF24;
+        }
+
+        .hasil.kurang {
+            background: #FEF2F2;
+            border: 6px dashed #F87171;
+            box-shadow: 0 8px 0 #F87171;
+        }
+
+        .hasil h3 {
+            font-size: 28px;
+            font-weight: 900;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .hasil.bagus h3 { color: #059669; }
+        .hasil.cukup h3 { color: #B45309; }
+        .hasil.kurang h3 { color: #B91C1C; }
+
+        .hasil .skor {
+            font-size: 56px;
+            font-weight: 900;
+            margin: 16px 0;
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+        }
+
+        .hasil.bagus .skor { color: #10B981; }
+        .hasil.cukup .skor { color: #F59E0B; }
+        .hasil.kurang .skor { color: #EF4444; }
+
+        .hasil p {
+            font-size: 18px;
+            font-weight: 700;
+            color: #334155;
+            line-height: 1.6;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 24px;
+            color: #94A3B8;
+            font-size: 16px;
+            font-weight: 700;
+            background: #F8FAFC;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 16px 8px;
+            }
+            .header {
+                padding: 30px 20px;
+            }
+            .header h1 {
+                font-size: 28px;
+            }
+            .content {
+                padding: 24px 16px;
+            }
+            .tokoh-grid {
+                grid-template-columns: 1fr;
+            }
+            .btn-cek {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Kisah Nabi Lut A.S.</h1>
+            <p>Al-Islam &mdash; Kelas 2 SD</p>
+        </div>
+
+        <div class="content">
+
+            <h2 class="section-title">Susunan Cerita</h2>
+
+            <div class="tokoh-grid">
+                <div class="tokoh-card">
+                    <strong>Nabi Lut A.S.</strong>
+                    <span>Keponakan Nabi Ibrahim A.S.</span>
+                </div>
+                <div class="tokoh-card">
+                    <strong>Wa'ilah</strong>
+                    <span>Istri Nabi Lut A.S.</span>
+                </div>
+                <div class="tokoh-card">
+                    <strong>Raisa &amp; Zagrata</strong>
+                    <span>Dua putri Nabi Lut A.S.</span>
+                </div>
+                <div class="tokoh-card">
+                    <strong>Jibril, Israfil, Mikail</strong>
+                    <span>Tiga malaikat tamu Nabi Lut</span>
+                </div>
+            </div>
+
+            <div class="story-block">
+                <h3>Bagian 1 &mdash; Nabi Lut Berdakwah di Sodom</h3>
+                <p>Nabi Lut A.S. adalah keponakan Nabi Ibrahim A.S. Beliau pergi ke negeri Sodom bersama istrinya Wa'ilah dan dua putrinya, yaitu Raisa dan Zagrata. Di sana, Nabi Lut berdakwah mengajak masyarakat untuk berbuat baik dan menyembah Allah SWT.</p>
+            </div>
+
+            <div class="story-block">
+                <h3>Bagian 2 &mdash; Perbuatan Buruk Kaum Sodom</h3>
+                <p>Nabi Lut mengajak penduduk Sodom untuk tidak melakukan keburukan seperti mencuri dan merampok. Keburukan yang paling parah dilakukan kaum Sodom adalah menyukai sesama jenis. Perbuatan tersebut sangat dimurkai Allah SWT.</p>
+            </div>
+
+            <div class="story-block">
+                <h3>Bagian 3 &mdash; Nabi Lut Sangat Sedih</h3>
+                <p>Nabi Lut sangat sedih karena hanya sedikit kaum Sodom yang beriman kepada Allah. Istrinya ternyata mendukung perbuatan buruk kaum Sodom, bukan membantu suaminya berdakwah.</p>
+            </div>
+
+            <div class="story-block">
+                <h3>Bagian 4 &mdash; Tiga Malaikat Bertamu</h3>
+                <p>Ketika Malaikat Jibril, Israfil, dan Mikail datang bertamu ke rumah Nabi Lut dalam bentuk manusia yang tampan, beliau sangat takut tamunya diganggu oleh kaum Sodom dan merahasiakan kedatangannya. Namun, istri Nabi Lut justru memberi tahu kaum Sodom bahwa di rumahnya ada tamu.</p>
+            </div>
+
+            <div class="story-block">
+                <h3>Bagian 5 &mdash; Azab Allah Turun</h3>
+                <p>Mendengar informasi tersebut, kaum Sodom memaksa untuk masuk rumah Nabi Lut. Setelah masuk, kaum Sodom dibutakan oleh malaikat sehingga tidak bisa melihat. Kemudian mereka diberi azab oleh Allah berupa hujan batu.</p>
+            </div>
+
+            <div class="pesan-box">
+                <h3>Pesan Moral</h3>
+                <ul>
+                    <li>Selalu mengajak orang lain untuk berbuat baik.</li>
+                    <li>Jauhi perbuatan buruk seperti mencuri dan merampok.</li>
+                    <li>Taat kepada perintah Allah SWT.</li>
+                    <li>Menjaga tamu dengan baik dan ramah.</li>
+                    <li>Jangan mendukung perbuatan buruk orang lain.</li>
+                </ul>
+            </div>
+
+            <h2 class="section-title">Soal &mdash; Ayo Berpikir!</h2>
+            <p class="soal-intro">Pilih satu jawaban yang paling tepat. Bacalah setiap soal dengan teliti sebelum menjawab.</p>
+
+            <form id="quizForm">
+
+                <div class="soal-card">
+                    <h4><span class="nomor">1</span> Mengapa Nabi Lut pergi ke negeri Sodom?</h4>
+                    <ul class="pilihan">
+                        <li><label><input type="radio" name="soal1" value="a"><span>a. Untuk berlibur bersama keluarga</span></label></li>
+                        <li><label><input type="radio" name="soal1" value="b"><span>b. Untuk mengajak penduduk berbuat baik dan menyembah Allah</span></label></li>
+                        <li><label><input type="radio" name="soal1" value="c"><span>c. Untuk berdagang dan mencari kekayaan</span></label></li>
+                    </ul>
+                    <div class="feedback" id="fb1"></div>
+                </div>
+
+                <div class="soal-card">
+                    <h4><span class="nomor">2</span> Nabi Lut mengajak penduduk Sodom untuk tidak mencuri dan merampok. Apa tujuan Nabi Lut melakukan hal itu?</h4>
+                    <ul class="pilihan">
+                        <li><label><input type="radio" name="soal2" value="a"><span>a. Agar penduduk Sodom menjadi kaya</span></label></li>
+                        <li><label><input type="radio" name="soal2" value="b"><span>b. Agar penduduk Sodom takut kepada beliau</span></label></li>
+                        <li><label><input type="radio" name="soal2" value="c"><span>c. Agar penduduk Sodom hidup damai dan diridhai Allah</span></label></li>
+                    </ul>
+                    <div class="feedback" id="fb2"></div>
+                </div>
+
+                <div class="soal-card">
+                    <h4><span class="nomor">3</span> Mengapa Nabi Lut sangat sedih melihat keadaan kaum Sodom?</h4>
+                    <ul class="pilihan">
+                        <li><label><input type="radio" name="soal3" value="a"><span>a. Karena beliau tidak punya teman bermain</span></label></li>
+                        <li><label><input type="radio" name="soal3" value="b"><span>b. Karena hanya sedikit penduduk yang mau beriman kepada Allah</span></label></li>
+                        <li><label><input type="radio" name="soal3" value="c"><span>c. Karena beliau rindu kepada Nabi Ibrahim</span></label></li>
+                    </ul>
+                    <div class="feedback" id="fb3"></div>
+                </div>
+
+                <div class="soal-card">
+                    <h4><span class="nomor">4</span> Istri Nabi Lut mendukung perbuatan buruk kaum Sodom. Menurutmu, apa yang seharusnya dilakukan oleh istri Nabi Lut?</h4>
+                    <ul class="pilihan">
+                        <li><label><input type="radio" name="soal4" value="a"><span>a. Mendukung suaminya untuk mengajak penduduk berbuat baik</span></label></li>
+                        <li><label><input type="radio" name="soal4" value="b"><span>b. Pergi meninggalkan Nabi Lut</span></label></li>
+                        <li><label><input type="radio" name="soal4" value="c"><span>c. Ikut melakukan perbuatan buruk bersama kaum Sodom</span></label></li>
+                    </ul>
+                    <div class="feedback" id="fb4"></div>
+                </div>
+
+                <div class="soal-card">
+                    <h4><span class="nomor">5</span> Mengapa Nabi Lut merahasiakan kedatangan tamunya dari kaum Sodom?</h4>
+                    <ul class="pilihan">
+                        <li><label><input type="radio" name="soal5" value="a"><span>a. Karena beliau tidak suka berbagi dengan orang lain</span></label></li>
+                        <li><label><input type="radio" name="soal5" value="b"><span>b. Karena beliau takut tamunya diganggu oleh kaum Sodom</span></label></li>
+                        <li><label><input type="radio" name="soal5" value="c"><span>c. Karena tamunya tidak mau bertemu dengan siapa pun</span></label></li>
+                    </ul>
+                    <div class="feedback" id="fb5"></div>
+                </div>
+
+                <div class="soal-card">
+                    <h4><span class="nomor">6</span> Istri Nabi Lut memberitahu kaum Sodom tentang tamu yang datang. Apa akibat dari perbuatan istrinya itu?</h4>
+                    <ul class="pilihan">
+                        <li><label><input type="radio" name="soal6" value="a"><span>a. Kaum Sodom memaksa masuk ke rumah Nabi Lut</span></label></li>
+                        <li><label><input type="radio" name="soal6" value="b"><span>b. Kaum Sodom menjadi takut dan pergi</span></label></li>
+                        <li><label><input type="radio" name="soal6" value="c"><span>c. Kaum Sodom meminta maaf kepada Nabi Lut</span></label></li>
+                    </ul>
+                    <div class="feedback" id="fb6"></div>
+                </div>
+
+                <div class="soal-card">
+                    <h4><span class="nomor">7</span> Setelah kaum Sodom masuk ke rumah Nabi Lut, malaikat membuat mereka tidak bisa melihat. Menurutmu, mengapa malaikat melakukan hal itu?</h4>
+                    <ul class="pilihan">
+                        <li><label><input type="radio" name="soal7" value="a"><span>a. Agar kaum Sodom tidak bisa mengganggu tamu Nabi Lut</span></label></li>
+                        <li><label><input type="radio" name="soal7" value="b"><span>b. Agar kaum Sodom bisa tidur dengan nyenyak</span></label></li>
+                        <li><label><input type="radio" name="soal7" value="c"><span>c. Agar kaum Sodom bisa melihat dengan lebih jelas</span></label></li>
+                    </ul>
+                    <div class="feedback" id="fb7"></div>
+                </div>
+
+                <div class="soal-card">
+                    <h4><span class="nomor">8</span> Allah menurunkan azab berupa hujan batu kepada kaum Sodom. Apa sebab utama azab itu diturunkan?</h4>
+                    <ul class="pilihan">
+                        <li><label><input type="radio" name="soal8" value="a"><span>a. Karena kaum Sodom tidak mau berbagi makanan</span></label></li>
+                        <li><label><input type="radio" name="soal8" value="b"><span>b. Karena kaum Sodom durhaka dan terus melakukan perbuatan buruk</span></label></li>
+                        <li><label><input type="radio" name="soal8" value="c"><span>c. Karena kaum Sodom tidak mau bermain dengan Nabi Lut</span></label></li>
+                    </ul>
+                    <div class="feedback" id="fb8"></div>
+                </div>
+
+                <div class="soal-card">
+                    <h4><span class="nomor">9</span> Jika kamu melihat temanmu melakukan perbuatan buruk seperti mencuri, apa yang sebaiknya kamu lakukan?</h4>
+                    <ul class="pilihan">
+                        <li><label><input type="radio" name="soal9" value="a"><span>a. Ikut melakukan seperti yang dia lakukan</span></label></li>
+                        <li><label><input type="radio" name="soal9" value="b"><span>b. Diam saja dan pura-pura tidak tahu</span></label></li>
+                        <li><label><input type="radio" name="soal9" value="c"><span>c. Menasehatinya dengan baik agar berhenti berbuat buruk</span></label></li>
+                    </ul>
+                    <div class="feedback" id="fb9"></div>
+                </div>
+
+                <div class="soal-card">
+                    <h4><span class="nomor">10</span> Dari kisah Nabi Lut, pelajaran paling penting yang bisa kita ambil adalah ....</h4>
+                    <ul class="pilihan">
+                        <li><label><input type="radio" name="soal10" value="a"><span>a. Kita harus selalu taat kepada Allah dan menjauhi perbuatan buruk</span></label></li>
+                        <li><label><input type="radio" name="soal10" value="b"><span>b. Kita harus takut kepada semua orang</span></label></li>
+                        <li><label><input type="radio" name="soal10" value="c"><span>c. Kita boleh melakukan apa saja asal tidak ketahuan</span></label></li>
+                    </ul>
+                    <div class="feedback" id="fb10"></div>
+                </div>
+
+                <button type="button" class="btn-cek" onclick="cekJawaban()">Cek Jawaban</button>
+
+                <div class="hasil" id="hasil">
+                    <h3 id="hasilJudul"></h3>
+                    <div class="skor" id="hasilSkor"></div>
+                    <p id="hasilPesan"></p>
+                </div>
+
+            </form>
+        </div>
+
+        <div class="footer">
+            Pembelajaran Al-Islam Kelas 2 SD &mdash; Kisah Nabi Lut A.S.
+        </div>
+    </div>
+
+    <script>
+        const kunciJawaban = {
+            soal1: 'b',
+            soal2: 'c',
+            soal3: 'b',
+            soal4: 'a',
+            soal5: 'b',
+            soal6: 'a',
+            soal7: 'a',
+            soal8: 'b',
+            soal9: 'c',
+            soal10: 'a'
+        };
+
+        const penjelasan = {
+            soal1: 'Nabi Lut pergi ke Sodom untuk berdakwah, yaitu mengajak penduduk berbuat baik dan menyembah Allah.',
+            soal2: 'Nabi Lut mengajak penduduk menjauhi keburukan agar mereka hidup damai dan diridhai Allah SWT.',
+            soal3: 'Nabi Lut sedih karena hanya sedikit penduduk Sodom yang mau beriman kepada Allah.',
+            soal4: 'Sebagai istri, seharusnya Wa\'ilah mendukung suaminya untuk mengajak penduduk berbuat baik.',
+            soal5: 'Nabi Lut merahasiakan kedatangan tamunya karena takut kaum Sodom yang buruk akan mengganggu mereka.',
+            soal6: 'Karena istri Nabi Lut membocorkan rahasia, kaum Sodom datang dan memaksa masuk ke rumah beliau.',
+            soal7: 'Malaikat membuat kaum Sodom buta agar mereka tidak bisa mengganggu tamu Nabi Lut.',
+            soal8: 'Allah menurunkan azab karena kaum Sodom durhaka dan terus-menerus melakukan perbuatan buruk.',
+            soal9: 'Kita harus menasehati teman dengan baik, seperti Nabi Lut yang mengajak penduduk Sodom berbuat baik.',
+            soal10: 'Pelajaran terpenting dari kisah ini adalah kita harus selalu taat kepada Allah dan menjauhi perbuatan buruk.'
+        };
+
+        function cekJawaban() {
+            let skor = 0;
+            const total = 10;
+
+            for (let i = 1; i <= total; i++) {
+                const nama = 'soal' + i;
+                const selected = document.querySelector('input[name="' + nama + '"]:checked');
+                const fb = document.getElementById('fb' + i);
+
+                if (selected && selected.value === kunciJawaban[nama]) {
+                    skor++;
+                    fb.className = 'feedback benar';
+                    fb.textContent = 'Benar! ' + penjelasan[nama];
+                } else {
+                    fb.className = 'feedback salah';
+                    fb.textContent = 'Kurang tepat. ' + penjelasan[nama];
+                }
+            }
+
+            const hasil = document.getElementById('hasil');
+            const judul = document.getElementById('hasilJudul');
+            const skorEl = document.getElementById('hasilSkor');
+            const pesan = document.getElementById('hasilPesan');
+
+            hasil.className = 'hasil tampil';
+            skorEl.textContent = skor + ' dari ' + total;
+
+            if (skor >= 8) {
+                hasil.classList.add('bagus');
+                judul.textContent = 'Hebat Sekali!';
+                pesan.textContent = 'Kamu sangat memahami kisah Nabi Lut A.S. dan bisa mengambil pelajarannya dengan baik. Terus semangat belajar!';
+            } else if (skor >= 5) {
+                hasil.classList.add('cukup');
+                judul.textContent = 'Bagus!';
+                pesan.textContent = 'Kamu sudah cukup memahami ceritanya. Coba baca lagi bagian yang belum kamu pahami, lalu coba lagi!';
+            } else {
+                hasil.classList.add('kurang');
+                judul.textContent = 'Ayo Belajar Lagi!';
+                pesan.textContent = 'Baca kembali cerita Nabi Lut A.S. di atas dengan teliti. Kamu pasti bisa menjawab dengan benar!';
+            }
+
+            hasil.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    </script>
+</body>
+</html>
